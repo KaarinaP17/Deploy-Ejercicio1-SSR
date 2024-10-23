@@ -1,0 +1,115 @@
+:root {
+  /* Colores primarios */
+  --primary-background-color: #e9e6df; /* Color de fondo principal */
+  --primary-text-color: #a2766e; /* Color de texto principal */
+  
+  /* Colores secundarios */
+  --secondary-text-color: #6e6d6a; /* Color de encabezado */
+  --secondary-paragraph-color: #333333; /* Color de párrafos */
+  --secondary-card-background-color: #ffffff; /* Fondo de la tarjeta */
+  --secondary-link-background-color: #d1c4b2; /* Fondo del enlace-botón */
+  --secondary-hover-background-color: #bca691; /* Fondo del enlace-botón al realizar hover */
+
+  /* Colores terciarios */
+  --tertiary-shadow-color: rgba(0, 0, 0, 0.1); /* Sombra general (tarjetas, botones) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  background-color: var(--secondary-card-background-color);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px var(--tertiary-shadow-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--secondary-paragraph-color);
+  margin-bottom: 15px;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--secondary-link-background-color);
+  color: var(--secondary-text-color);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px var(--tertiary-shadow-color);
+  margin-top: 10px;
+}
+
+a:hover {
+  background-color: var(--secondary-hover-background-color);
+  transform: translateY(-2px);
+}
+
+a:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--secondary-hover-background-color);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .card {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  a {
+    font-size: 0.9rem;
+    padding: 6px 15px;
+  }
+}

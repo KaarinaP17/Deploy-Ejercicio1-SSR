@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Form
+    style
+      include ../assets/styles/form.css
+  body
+    h1 Enter your personal information:
+    
+    if(error)
+      .error #{error}
+
+    form(id="form" method='POST' type='submit' action='/submit')
+      input(type="text" name="name" placeholder="Your Name")
+      input(type="number" name="age" placeholder="Your Age" min='1')
+      input(type="email" name="email" placeholder="Your Email")
+      button(type="submit") Submit

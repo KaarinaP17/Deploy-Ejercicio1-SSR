@@ -1,0 +1,78 @@
+:root {
+  /* Colores primarios */
+  --primary-background-color: #e9e6df; /* Color de fondo principal */
+  --primary-text-color: #a2766e; /* Color del texto principal */
+  
+  /* Colores secundarios */
+  --secondary-text-color: #6e6d6a; /* Color de encabezado */
+  --secondary-link-background-color: #d1c4b2; /* Fondo del enlace-botón */
+  --secondary-hover-background-color: #bca691; /* Fondo del enlace-botón al realizar hover */
+
+  /* Colores terciarios */
+  --tertiary-shadow-color: rgba(0, 0, 0, 0.1); /* Sombra general ( tarjetas, botones ) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+
+.wave {
+  margin-left: 10px;
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+a {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--primary-text-color);
+  background-color: var(--secondary-link-background-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px var(--tertiary-shadow-color);
+}
+
+a:hover {
+  background-color: var(--secondary-link-background-color);
+  transform: scale(1.05);
+}
+
+a:focus {
+  shadow: 2px solid var(--secondary-hover-background-color);
+  shadow-offset: 4px;
+}
